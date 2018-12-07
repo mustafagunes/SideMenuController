@@ -30,7 +30,7 @@ class ContainerVC: UIViewController {
     var centerController: UIViewController!
     
     var isHidden = false
-    var tap: UIGestureRecognizer!
+    var tap: UITapGestureRecognizer!
     let centerPanelExpandedOffset: CGFloat = 160
     
     var currentState: SliderOutState = .collapsed { didSet {
@@ -74,7 +74,7 @@ extension ContainerVC: SideMenuDelegate {
         }
     }
     
-    func animateLeftPanel(shouldExpand: Bool) {
+    @objc func animateLeftPanel(shouldExpand: Bool) {
         // TODO : ...
     }
     
@@ -82,6 +82,28 @@ extension ContainerVC: SideMenuDelegate {
         view.insertSubview(sidePanelController.view, at: 0)
         addChildViewController(sidePanelController)
         sidePanelController.didMove(toParentViewController: self)
+    }
+    
+    func setupWhiteCoverView() {
+        let whiteCoverView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
+        
+        whiteCoverView.tag = 25
+        whiteCoverView.alpha = 0.0
+        whiteCoverView.backgroundColor = .white
+        
+        self.centerController.view.addSubview(whiteCoverView)
+        whiteCoverView.fadeTo(alphaValue: 0.75, withDuration: 0.2)
+        
+        tap = UITapGestureRecognizer(target: self, action: #selector(animateLeftPanel(shouldExpand:)))
+        tap.numberOfTapsRequired = 1
+        
+        self.centerController.view.addGestureRecognizer(tap)
+    }
+    
+    func animateStatusBar() {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+            self.setNeedsStatusBarAppearanceUpdate()
+        })
     }
     
     func shouldShowShadowForCenterViewController(status: Bool) {
@@ -102,5 +124,13 @@ private extension UIStoryboard {
     
     class func homeVC() -> HomeVC? {
         return mainStoryboard().instantiateViewController(withIdentifier: "HomeVC") as? HomeVC
+    }
+}
+
+private extension UIView {
+    func fadeTo(alphaValue : CGFloat, withDuration duration : TimeInterval) {
+        UIView.animate(withDuration: duration) {
+            self.alpha = alphaValue
+        }
     }
 }
