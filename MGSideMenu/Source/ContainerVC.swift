@@ -75,7 +75,32 @@ extension ContainerVC: SideMenuDelegate {
     }
     
     @objc func animateLeftPanel(shouldExpand: Bool) {
-        // TODO : ...
+        if shouldExpand {
+            isHidden = !isHidden
+            animateStatusBar()
+            
+            setupWhiteCoverView()
+            currentState = .leftPanelExpanded
+            
+            animateCenterPanelXPosition(targetPosition: centerController.view.frame.width - centerPanelExpandedOffset)
+        } else {
+            isHidden = !isHidden
+            animateStatusBar()
+            
+            hideWhiteCoverView()
+            animateCenterPanelXPosition(targetPosition: 0) { (finished) in
+                if finished == true {
+                    self.currentState = .collapsed
+                    self.leftVC = nil
+                }
+            }
+        }
+    }
+    
+    func animateCenterPanelXPosition(targetPosition : CGFloat, completion : ((Bool) -> Void)! = nil) {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+            self.centerController.view.frame.origin.x = targetPosition
+        }, completion: completion)
     }
     
     func addChildSidePanelViewController(_ sidePanelController: LeftSidePanelVC) {
@@ -109,6 +134,20 @@ extension ContainerVC: SideMenuDelegate {
     func shouldShowShadowForCenterViewController(status: Bool) {
         if status == true { centerController.view.layer.shadowOpacity = 0.6 }
         else { centerController.view.layer.shadowOpacity = 0.6 }
+    }
+    
+    func hideWhiteCoverView() {
+        centerController.view.removeGestureRecognizer(tap)
+        
+        for subview in self.centerController.view.subviews {
+            if subview.tag == 25 {
+                UIView.animate(withDuration: 0.2, animations: {
+                    subview.alpha = 0.0
+                }) { (finished) in
+                    subview.removeFromSuperview()
+                }
+            }
+        }
     }
 }
 
