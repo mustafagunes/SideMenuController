@@ -13,5 +13,10 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    // MARK : Button Action
+    @IBAction func profileButtonClicked(_ sender: Any) {
+        // TODO : ...
+    }
 }
 
