@@ -14,7 +14,7 @@
         <!--HomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="MGSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="BYZ-38-t0r" customClass="HomeVC" customModule="MGSideMenu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mLY-lm-lm6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,7 +43,7 @@
         <!--Left Side PanelVC-->
         <scene sceneID="u5o-FC-wc3">
             <objects>
-                <viewController storyboardIdentifier="LeftSidePanelVC" id="oPx-Ls-UQV" customClass="LeftSidePanelVC" customModule="htchhkr_development" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LeftSidePanelVC" id="oPx-Ls-UQV" customClass="LeftSidePanelVC" customModule="MGSideMenu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="17j-Le-8ho"/>
                         <viewControllerLayoutGuide type="bottom" id="TgF-w7-EfU"/>
@@ -121,9 +121,6 @@
                                 <state key="normal" title="LOGIN">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="signUpLoginBtnWasClicked:" destination="oPx-Ls-UQV" eventType="touchUpInside" id="lhE-bN-jqf"/>
-                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aah-9r-tQB">
                                 <rect key="frame" x="16" y="414" width="200" height="180"/>
@@ -133,9 +130,6 @@
                                         <subviews>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Wc-8e-vTE">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
-                                                <connections>
-                                                    <action selector="switchWasToggled:" destination="oPx-Ls-UQV" eventType="valueChanged" id="ZLn-QR-GCY"/>
-                                                </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEST Switch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWl-mE-o9P">
                                                 <rect key="frame" x="0.0" y="36" width="78.5" height="19.5"/>
@@ -185,14 +179,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ePE-pk-S6n"/>
                     </view>
-                    <connections>
-                        <outlet property="loginOutBtn" destination="3i5-oH-lwp" id="aPj-dE-U9k"/>
-                        <outlet property="pickupModeLabel" destination="uWl-mE-o9P" id="bla-qu-A1y"/>
-                        <outlet property="pickupModeSwitch" destination="8Wc-8e-vTE" id="J3H-Pf-7Cz"/>
-                        <outlet property="userAccountTypeLbl" destination="UNH-1q-Jdc" id="fNU-i0-nT0"/>
-                        <outlet property="userEmailLbl" destination="aDs-zF-psE" id="5RQ-7j-Hly"/>
-                        <outlet property="userImageView" destination="vOm-SZ-sQf" id="7NV-pe-a9Z"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qrd-m0-JlA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
