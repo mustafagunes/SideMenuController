@@ -9,14 +9,16 @@
 import UIKit
 
 class HomeVC: UIViewController {
-
+    
+    var delegate: SideMenuDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     // MARK : Button Action
     @IBAction func profileButtonClicked(_ sender: Any) {
-        // TODO : ...
+        delegate?.toggleLeftPanel()
     }
 }
 

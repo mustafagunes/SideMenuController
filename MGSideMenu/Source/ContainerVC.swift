@@ -41,10 +41,32 @@ class ContainerVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        initCenter(screen: showVC)
     }
     
     func initCenter(screen: ShowWichVC) {
-        // TODO : ...
+        var presentingController: UIViewController
+        
+        showVC = screen
+        
+        if homeVC == nil {
+            homeVC = UIStoryboard.homeVC()
+            homeVC.delegate = self
+        }
+        
+        presentingController = homeVC
+        
+        if let con = centerController {
+            con.view.removeFromSuperview()
+            con.removeFromParentViewController()
+        }
+        
+        centerController = presentingController
+        
+        view.addSubview(centerController.view)
+        addChildViewController(centerController)
+        centerController.didMove(toParentViewController: self)
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -166,7 +188,7 @@ private extension UIStoryboard {
     }
 }
 
-private extension UIView {
+extension UIView {
     func fadeTo(alphaValue : CGFloat, withDuration duration : TimeInterval) {
         UIView.animate(withDuration: duration) {
             self.alpha = alphaValue

@@ -13,9 +13,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    fileprivate var containerVC = ContainerVC()
+    
+    var MenuContainerVC : ContainerVC {
+        return containerVC
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        containerVC = ContainerVC()
+        
+        window?.rootViewController = containerVC
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
