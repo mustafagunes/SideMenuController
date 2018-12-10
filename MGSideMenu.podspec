@@ -14,10 +14,10 @@ Pod::Spec.new do |s|
   s.social_media_url    = "http://twitter.com/bashreks"
   s.platform            = :ios, "9.0"
   s.source              = { :git => "https://github.com/mustafagunes/MGSideMenu.git", :tag => s.version }
-  s.source_files        = "MGSideMenu/Classes/**/*"
-  # s.resource_bundles    = { 'image' => ['MGSideMenu/Classes/image/*.{png}'] }
+  s.source_files        = "MGSideMenu/Classes/UI", "MGSideMenu/Classes/Images", "MGSideMenu/Classes/Controller", "MGSideMenu/Classes/Source"
   s.swift_version       = '4.1'
   s.frameworks          = 'UIKit'
   s.requires_arc = true
+  # s.resource_bundles    = { 'Images' => ['MGSideMenu/MGSideMenu/Classes/Images/*.{png}'] }
   
 end
