@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -41,6 +41,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E156681B21BE37DD001660FC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E1797D4021BAB87C00AB6B2F /* Controller */,
+				E1797D3A21BAADE300AB6B2F /* Source */,
+				E1797D3B21BAADEB00AB6B2F /* UI */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		E1797D1C21BAAD2300AB6B2F = {
 			isa = PBXGroup;
 			children = (
@@ -60,9 +70,7 @@
 		E1797D2721BAAD2300AB6B2F /* MGSideMenu */ = {
 			isa = PBXGroup;
 			children = (
-				E1797D4021BAB87C00AB6B2F /* Controller */,
-				E1797D3A21BAADE300AB6B2F /* Source */,
-				E1797D3B21BAADEB00AB6B2F /* UI */,
+				E156681B21BE37DD001660FC /* Classes */,
 				E1797D2821BAAD2300AB6B2F /* AppDelegate.swift */,
 				E1797D3421BAAD2400AB6B2F /* Info.plist */,
 			);
