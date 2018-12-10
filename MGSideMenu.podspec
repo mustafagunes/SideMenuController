@@ -8,15 +8,16 @@ Pod::Spec.new do |s|
                         DESC
 
   s.homepage            = "https://github.com/mustafagunes/MGSideMenu"
-  s.screenshots         = "https://github.com/mustafagunes/MGSideMenu/blob/master/Resource/MGSideMenuSS.png", "https://github.com/mustafagunes/MGSideMenu/blob/master/Resource/MGSideMenu.mov"
+  s.screenshots         = "https://github.com/mustafagunes/MGSideMenu/raw/master/Resource/MGSideMenuSS.png"
   s.license             = { :type => "MIT", :file => "LICENSE" }
   s.author              = { "Mustafa GUNES" => "gunes149@gmail.com" }
   s.social_media_url    = "http://twitter.com/bashreks"
   s.platform            = :ios, "9.0"
   s.source              = { :git => "https://github.com/mustafagunes/MGSideMenu.git", :tag => s.version }
-  s.source_files        = "Classes/**/*"
-  s.resource_bundles    = { 'Assets' => ['MGSideMenu/Classes/Assets/*.{png}'] }
+  s.source_files        = "MGSideMenu/Classes/**/*"
+  # s.resource_bundles    = { 'image' => ['MGSideMenu/Classes/image/*.{png}'] }
   s.swift_version       = '4.1'
   s.frameworks          = 'UIKit'
+  s.requires_arc = true
   
 end

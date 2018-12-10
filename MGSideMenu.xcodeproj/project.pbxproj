@@ -50,22 +50,21 @@
 		E156681B21BE37DD001660FC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E156681C21BE480D001660FC /* Assets */,
+				E156681C21BE480D001660FC /* Images */,
 				E1797D4021BAB87C00AB6B2F /* Controller */,
 				E1797D3A21BAADE300AB6B2F /* Source */,
-				E1797D3B21BAADEB00AB6B2F /* UI */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		E156681C21BE480D001660FC /* Assets */ = {
+		E156681C21BE480D001660FC /* Images */ = {
 			isa = PBXGroup;
 			children = (
 				E156682121BE484D001660FC /* noProfilePhoto.jpg */,
 				E156681F21BE4846001660FC /* mustafagunes.jpeg */,
 				E156681D21BE483E001660FC /* menuSliderBtn@3x.png */,
 			);
-			path = Assets;
+			path = Images;
 			sourceTree = "<group>";
 		};
 		E1797D1C21BAAD2300AB6B2F = {
@@ -87,6 +86,7 @@
 		E1797D2721BAAD2300AB6B2F /* MGSideMenu */ = {
 			isa = PBXGroup;
 			children = (
+				E1797D3B21BAADEB00AB6B2F /* UI */,
 				E156681B21BE37DD001660FC /* Classes */,
 				E1797D2821BAAD2300AB6B2F /* AppDelegate.swift */,
 				E1797D3421BAAD2400AB6B2F /* Info.plist */,
