@@ -10,6 +10,7 @@ import UIKit
 
 class HomeVC: UIViewController {
     
+    // MARK : - Definition
     var delegate: SideMenuDelegate?
     
     override func viewDidLoad() {
