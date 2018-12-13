@@ -10,13 +10,14 @@
 
 ### Images from the application
 
+# [Preview Video](https://github.com/mustafagunes/SideMenuController/raw/master/Resource/MGSideMenu.mov)
 
 ![ScreenShot](https://github.com/mustafagunes/SideMenuController/blob/master/Resource/MGSideMenuSS.png)
 
 --------------------
 
 * **SIMPLE INSTALLATION**
-    - [Download .zip file](https://github.com/mustafagunes/MGSideMenu.git)
+    - [Download .zip file](https://github.com/mustafagunes/SideMenuController/archive/master.zip)
     - After the download is finished, unzip the files.
     - Copy the classes in the project and paste them into your own project.
     - Add the following code to your own project.
