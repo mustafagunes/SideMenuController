@@ -9,7 +9,7 @@
 ![](https://img.shields.io/badge/version-1.0-lightgrey.svg)
 
 ### Images from the application
-# [[Preview Movie Link](/mustafagunes/SideMenuController/raw/master/Resource/MGSideMenu.mov)]
+
 
 ![ScreenShot](https://github.com/mustafagunes/SideMenuController/blob/master/Resource/MGSideMenuSS.png)
 
