@@ -106,8 +106,8 @@
 		E1797D3B21BAADEB00AB6B2F /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				E1797D2C21BAAD2300AB6B2F /* Main.storyboard */,
 				E1797D2F21BAAD2400AB6B2F /* Assets.xcassets */,
+				E1797D2C21BAAD2300AB6B2F /* Main.storyboard */,
 				E1797D3121BAAD2400AB6B2F /* LaunchScreen.storyboard */,
 			);
 			path = UI;

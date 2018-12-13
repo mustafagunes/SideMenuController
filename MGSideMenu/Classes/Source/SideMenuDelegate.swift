@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol SideMenuDelegate {
+public protocol SideMenuDelegate {
     func toggleLeftPanel()
     func addLeftPanelViewController()
     func animateLeftPanel(shouldExpand: Bool)
